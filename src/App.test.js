@@ -1,6 +1,7 @@
 import { mount } from 'enzyme';
-import { findByTestAttribute} from '../test/testUtils';
+import { findByTestAttribute, storeFactory } from '../test/testUtils';
 import App from './App';
+import { Provider } from 'react-redux';
 
 jest.mock('./actions');
 import { getSecretWord as mockGetSecretWord } from './actions';
@@ -9,7 +10,8 @@ import { getSecretWord as mockGetSecretWord } from './actions';
  * @returns {ShallowWrapper}
  */
 const setup = () => {
-  return mount(<App />);
+  const store = storeFactory();
+  return mount(<Provider store={store}><App /></Provider>);
 };
 
 test('Irenders without errors', () => {
