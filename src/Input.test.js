@@ -11,16 +11,62 @@ const mockSetCurrentGuess = jest.fn();
  * @function setup
  * @returns {ShallowWrapper}
  */
-const setup = () => {
-  return shallow(<Input />)
+const setup = (success=false, secretWord='patry') => {
+  return shallow(<Input success={success} secretWord={secretWord} />)
 };
 
-test('Input renders without errors', () => {
-  const wrapper = setup();
-  const inputComponent = findByTestAttribute(wrapper, 'component-input');
+describe('render', () => {
+  describe('success is true', () => {
+    let wrapper;
 
-  expect(inputComponent.length).toBe(1);
+    beforeEach(() => {
+      wrapper = setup(true);
+    });
+
+    test('Input renders without errors', () => {
+      const wrapper = setup();
+      const inputComponent = findByTestAttribute(wrapper, 'component-input');
+
+      expect(inputComponent.length).toBe(1);
+    });
+
+    test('input box does not show', () => {
+      const inputBox = findByTestAttribute(wrapper, 'input-box');
+      expect(inputBox.exists()).toBe(false);
+    });
+
+    test('submit button does not show', () => {
+      const submitButton = findByTestAttribute(wrapper, 'submit-button');
+      expect(submitButton.exists()).toBe(false);
+    });
+  });
+
+  describe('success is false', () => {
+    let wrapper;
+
+    beforeEach(() => {
+      wrapper = setup(false);
+    });
+
+    test('Input renders without errors', () => {
+      const wrapper = setup();
+      const inputComponent = findByTestAttribute(wrapper, 'component-input');
+
+      expect(inputComponent.length).toBe(1);
+    });
+
+    test('input box showsa', () => {
+      const inputBox = findByTestAttribute(wrapper, 'input-box');
+      expect(inputBox.exists()).toBe(true);
+    });
+
+    test('submit button does shows', () => {
+      const submitButton = findByTestAttribute(wrapper, 'submit-button');
+      expect(submitButton.exists()).toBe(true);
+    });
+  });
 });
+
 
 describe('state controlled input field', () => {
   let wrapper;
