@@ -4,6 +4,8 @@ import { findByTestAttribute } from '../test/testUtils';
 
 import Input from './Input';
 
+const mockSetCurrentGuess = jest.fn();
+
 /**
  * Setup function for input component.
  * @function setup
@@ -21,15 +23,31 @@ test('Input renders without errors', () => {
 });
 
 describe('state controlled input field', () => {
-  test('state updates with value of input box upon change', () => {
-    const mockSetCurrentGuess = jest.fn();
-    React.useState = jest.fn(() => ['', mockSetCurrentGuess]);
+  let wrapper;
+  let originalUseState;
 
-    const wrapper = setup();
+  beforeEach(() => {
+    mockSetCurrentGuess.mockClear();
+    originalUseState = React.useState;
+    React.useState = () => ["", mockSetCurrentGuess];
+    wrapper = setup();
+  });
+  afterEach(() => {
+    React.useState = originalUseState;
+  });
+
+  test('state updates with value of input box upon change', () => {
     const inputBox = findByTestAttribute(wrapper, 'input-box');
     const mockEvent = { target: { value: 'train' } };
     inputBox.simulate('change', mockEvent);
 
     expect(mockSetCurrentGuess).toHaveBeenCalledWith('train');
-  })
+  });
+
+  test('field is cleared upon submit button click', () => {
+    const submitButton = findByTestAttribute(wrapper, 'submit-button');
+    submitButton.simulate('click', { preventDefault() {} });
+
+    expect(mockSetCurrentGuess).toHaveBeenCalledWith('');
+  });
 });

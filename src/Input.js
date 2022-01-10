@@ -18,6 +18,9 @@ const Input = ({ secretWord }) => {
           data-test="submit-button"
           className="btn btn-primary mb-2"
           type="submit"
+          onClick={() => {
+            setCurrentGuess('');
+          }}
         >
           Submit
         </button>
