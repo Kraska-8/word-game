@@ -1,5 +1,5 @@
 import moxios from 'moxios';
-import {getSecretWord, correctGuess, actionTypes } from './';
+import { getSecretWord, correctGuess, actionTypes } from './';
 
 describe('correctGuess', () => {
   test('returns an action with type `CORRECT_GUESS`', () => {
