@@ -6,7 +6,7 @@ import React from 'react';
  * @param {object} props - React props.
  * @returns {JSX.Element} - Rendered component (or null if `success` prop is false).
  */
-export default (props) => {
+const Congrats = (props) => {
   if (props.success) {
     return (
       <div data-test="component-congrats">
@@ -22,3 +22,4 @@ export default (props) => {
   }
 }
 
+export default Congrats;
