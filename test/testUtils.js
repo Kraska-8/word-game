@@ -1,8 +1,8 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import { middlewares } from '../src/configureStore';
 import rootReducer from '../src/reducers';
 
-export const storeFactory = (initialState) => createStore(rootReducer, initialState);
-
+export const storeFactory = (initialState) => createStore(rootReducer, initialState, applyMiddleware(...middlewares));
 
 /**
  * Return node(s) with the given data-test value.
