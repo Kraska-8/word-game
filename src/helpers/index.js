@@ -4,9 +4,9 @@
  * @param {string} secretWord - Secret word.
  * @returns {number} - Number of letters matched between guessed word and secret word.
  */
-export const getLetterMatchCount = (guessedWord, secretWord) => {
+export function getLetterMatchCount(guessedWord, secretWord) {
   const secretLetters = secretWord.split('');
-  const guessedLetters = new Set(guessedWord);
+  const guessedLetterSet = new Set(guessedWord);
 
-  return secretLetters.filter(letter => guessedLetters.has(letter)).length;
+  return secretLetters.filter(letter => guessedLetterSet.has(letter)).length;
 };

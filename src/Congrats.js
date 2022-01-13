@@ -14,12 +14,12 @@ const Congrats = (props) => {
           Congratulations! You guessed the word!
         </span>
       </div>
-    )
+    );
   } else {
     return (
       <div data-test="component-congrats" />
-    )
+    );
   }
-}
+};
 
 export default Congrats;
