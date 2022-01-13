@@ -15,7 +15,7 @@ const defaultProps = { display: false, secretWord };
  */
 const setup = (props = {}) => {
   const setupProps = { ...defaultProps, ...props };
-  return shallow(<SecretWordReveal {...setupProps} />);
+  return shallow(<SecretWordReveal { ...setupProps } />);
 };
 
 test('renders without error', () => {

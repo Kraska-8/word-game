@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import './App.css';
 import TotalGuesses from './TotalGuesses';
 import NewWordButton from './NewWordButton';
 import SecretWordReveal from './SecretWordReveal';

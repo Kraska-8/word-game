@@ -56,7 +56,6 @@ const getSecretWordDispatch = (dispatch) => {
           payload: response.data,
         });
       })
-      // note: axios rejects promise if status is 4xx or 5xx
       .catch((error) => {
         dispatch({ type: actionTypes.SERVER_ERROR });
       })

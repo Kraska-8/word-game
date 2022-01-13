@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import { findByTestAttr, storeFactory } from '../test/testUtils';
 import App from './App';
 
-// activate global mock to make sure getSecretWord doesn't make network call
 jest.mock('./actions');
 import { getSecretWord as mockGetSecretWord } from './actions';
 
@@ -44,7 +43,6 @@ describe('get secret word', () => {
     const wrapper = setup();
     mockGetSecretWord.mockClear();
 
-    // using setProps because wrapper.update() doesn't trigger useEffect
     wrapper.setProps();
 
     expect(mockGetSecretWord).toHaveBeenCalledTimes(0);

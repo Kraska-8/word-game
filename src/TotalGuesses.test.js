@@ -14,7 +14,7 @@ const defaultProps = { guessCount: 0 };
  */
 const setup = (props = {}) => {
   const setupProps = { ...defaultProps, ...props };
-  return shallow(<TotalGuesses {...setupProps} />)
+  return shallow(<TotalGuesses { ...setupProps } />)
 }
 
 test('renders without error', () => {

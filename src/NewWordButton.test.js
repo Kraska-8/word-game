@@ -14,7 +14,7 @@ const defaultProps = { display: false };
  */
 const setup = (props={}) => {
   const setupProps = { ...defaultProps, ...props };
-  return shallow(<NewWordButton {...setupProps} />);
+  return shallow(<NewWordButton { ...setupProps } />);
 }
 
 describe('render', () => {

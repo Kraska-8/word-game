@@ -14,7 +14,7 @@ const defaultProps = { formAction: () => {} };
  */
 const setup = (props = {}) => {
   const setupProps = { ...defaultProps, ...props };
-  return shallow(<EnterWordForm {...setupProps} />);
+  return shallow(<EnterWordForm { ...setupProps } />);
 };
 describe('render', () => {
   test('renders without error', () => {
