@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# Word game 
+React Testing with Jest and Enzyme
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
