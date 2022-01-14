@@ -1,10 +1,10 @@
 import React from 'react';
 
 /**
- * Functional react component for 'you gave up' message.
+ * Functional react component for 'you gave up' message
  * @function
- * @param {object} props - React props.
- * @returns {JSX.Element} - Rendered component (or null if `display` prop is false).
+ * @param {Object} props - React props
+ * @returns {JSX.Element} - Rendered component (or null if `display` prop is false)
  */
 const SecretWordReveal = ({ display, secretWord }) => {
   if (display) {

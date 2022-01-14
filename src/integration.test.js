@@ -28,6 +28,7 @@ describe('guessWord action dispatcher', () => {
           letterMatchCount: 3
         }]
       };
+
       expect(newState).toEqual(expectedState);
     });
 

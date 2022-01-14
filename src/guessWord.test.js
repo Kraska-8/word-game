@@ -12,11 +12,11 @@ jest.mock('./actions');
  * then submit a guessed word of 'train'
  # @function
  *
- * @param {object} state - Initial conditions.
+ * @param {Object} initialState - Initial conditions
  * @returns {Wrapper} - Enzyme wrapper of mounted App component
  */
 const setup = (initialState = {}) => {
-  const store = storeFactory(initialState)
+  const store = storeFactory(initialState);
   const wrapper = mount(<Provider store={store}><App /></Provider>);
 
   const inputBox = findByTestAttr(wrapper, 'input-box');

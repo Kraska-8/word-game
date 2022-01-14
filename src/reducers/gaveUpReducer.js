@@ -3,7 +3,7 @@ import { actionTypes } from '../actions';
 /**
  * @function gaveUp
  * @param {boolean} state - Whether the user has given up
- * @param {object} action - Action to be reduced
+ * @param {Object} action - Action to be reduced
  * @returns {boolean} - gaveUp state
  */
 export default (state = false, action) => {

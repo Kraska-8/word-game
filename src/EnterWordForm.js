@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
 
+/**
+ * Functional react component for entering word form
+ * @function
+ * @param {Object} props - React props
+ * @returns {JSX.Element} - Rendered component
+ */
 export const EnterWordForm = ({ formAction }) => {
   const [secretWord, setSecretWord] = useState('');
 

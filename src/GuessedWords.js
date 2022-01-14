@@ -1,5 +1,11 @@
 import React from 'react';
 
+/**
+ * Functional react component for guessed word table or game instruction
+ * @function
+ * @param {Object} props - React props
+ * @returns {JSX.Element} - Rendered component
+ */
 const GuessedWords = (props) => {
   let contents
   if (props.guessedWords.length === 0) {

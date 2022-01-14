@@ -3,7 +3,13 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { guessWord, giveUp } from './actions';
 
-function Input({ secretWord }) {
+/**
+ * Functional react component for user input form
+ * @function
+ * @param {string} secretWord - secret word
+ * @returns {JSX.Element} - Rendered component
+ */
+const Input = ({ secretWord }) => {
   const [currentGuess, setCurrentGuess] = React.useState('');
   const dispatch = useDispatch();
   const success = useSelector((state) => state.success);

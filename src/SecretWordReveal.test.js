@@ -8,9 +8,9 @@ const secretWord = 'party';
 const defaultProps = { display: false, secretWord };
 
 /**
- * Factory function to create a ShallowWrapper for the SecretWordReveal component.
+ * Factory function to create a ShallowWrapper for the SecretWordReveal component
  * @function setup
- * @param {object} props - Component props specific to this setup.
+ * @param {Object} props - Component props specific to this setup
  * @returns {ShallowWrapper}
  */
 const setup = (props = {}) => {

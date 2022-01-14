@@ -1,5 +1,11 @@
 import React from 'react';
 
+/**
+ * Functional react component for 'Enter your word' button
+ * @function
+ * @param {Object} props - React props
+ * @returns {JSX.Element} - Rendered component (or wrapper element if display 'prop' is false )
+ */
 const EnterWordButton = (props) => {
   if (props.display) {
     return (

@@ -2,9 +2,9 @@ import { actionTypes } from '../actions';
 
 /**
  * @function userEnterReducer
- * @param {string|null} state - State before reducer.
- * @param {object} action - Action sent to reducer.
- * @returns {string|null} - New state (depending on action type).
+ * @param {string|null} state - State before reducer
+ * @param {Object} action - Action sent to reducer
+ * @returns {string|null} - New state (depending on action type)
  */
 export default (state = null, action) => {
   switch (action.type) {
@@ -17,4 +17,4 @@ export default (state = null, action) => {
     default:
       return state;
   }
-}
+};

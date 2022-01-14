@@ -7,15 +7,16 @@ import EnterWordForm from './EnterWordForm';
 const defaultProps = { formAction: () => {} };
 
 /**
- * Factory function to create a ShallowWrapper for the EnterWordForm component.
+ * Factory function to create a ShallowWrapper for the EnterWordForm component
  * @function setup
- * @param {object} props - Component props specific to this setup.
+ * @param {Object} props - Component props specific to this setup
  * @returns {ShallowWrapper}
  */
 const setup = (props = {}) => {
   const setupProps = { ...defaultProps, ...props };
   return shallow(<EnterWordForm { ...setupProps } />);
 };
+
 describe('render', () => {
   test('renders without error', () => {
     const wrapper = setup();

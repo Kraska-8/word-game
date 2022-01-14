@@ -7,9 +7,9 @@ import TotalGuesses from './TotalGuesses';
 const defaultProps = { guessCount: 0 };
 
 /**
- * Factory function to create a ShallowWrapper for the TotalGuesses component.
+ * Factory function to create a ShallowWrapper for the TotalGuesses component
  * @function setup
- * @param {object} props - Component props specific to this setup.
+ * @param {Object} props - Component props specific to this setup
  * @returns {ShallowWrapper}
  */
 const setup = (props = {}) => {

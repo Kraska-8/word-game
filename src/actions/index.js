@@ -20,8 +20,8 @@ export const actionTypes = {
  * Returns Redux Thunk function that dispatches GUESS_WORD action
  * and (conditionally) CORRECT_GUESS action
  * @function guessWord
- * @param {string} guessedWord - Guessed word.
- * @returns {function} - Redux Thunk function.
+ * @param {string} guessedWord - Guessed word
+ * @returns {function} - Redux Thunk function
  */
 export const guessWord = (guessedWord) => {
   return function (dispatch, getState) {
@@ -107,9 +107,9 @@ export const resetGame = () => {
 };
 
 /**
- * Simple action creator that returns GIVE_UP action type.
+ * Simple action creator that returns GIVE_UP action type
  * @function giveUp
- * @returns {object} - GIVE_UP action type.
+ * @returns {Object} - GIVE_UP action type
  */
 export const giveUp = () => {
   return { type: actionTypes.GIVE_UP };
@@ -129,8 +129,8 @@ export const setUserSecretWord = (userSecretWord) => {
 };
 
 /**
- * Action creator that returns USER_ENTERING action type.
+ * Action creator that returns USER_ENTERING action type
  * @function setUserEntering
- * @returns {object} - Action with type USER_ENTERING.
+ * @returns {Object} - Action with type USER_ENTERING
  */
 export const setUserEntering = () => ({ type: actionTypes.USER_ENTERING });

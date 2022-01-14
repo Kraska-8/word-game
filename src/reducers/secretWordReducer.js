@@ -2,9 +2,9 @@ import { actionTypes } from '../actions';
 
 /**
  * @function secretWordReducer
- * @param {string} state - State before reducer.
- * @param {object} action - Action sent to reducer.
- * @returns {string} - New state (secret word payload from action).
+ * @param {string} state - State before reducer
+ * @param {Object} action - Action sent to reducer
+ * @returns {string} - New state (secret word payload from action)
  */
 export default (state = '', action) => {
   switch(action.type) {
@@ -13,4 +13,4 @@ export default (state = '', action) => {
     default:
       return state;
   }
-}
+};

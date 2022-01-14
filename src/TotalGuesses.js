@@ -1,10 +1,10 @@
 import React from 'react';
 
 /**
- * Functional react component for count of total guesses.
+ * Functional react component for count of total guesses
  * @function
- * @param {object} props - React props.
- * @returns {JSX.Element} - Rendered component.
+ * @param {Object} props - React props
+ * @returns {JSX.Element} - Rendered component
  */
 const TotalGuesses = (props) => {
   return (
