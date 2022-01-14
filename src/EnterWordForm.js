@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 export const EnterWordForm = ({ formAction }) => {
   const [secretWord, setSecretWord] = useState('');
 
-  const submitForm = (evt) => {
-    evt.preventDefault();
+  const submitForm = (e) => {
+    e.preventDefault();
 
     if (secretWord.length > 0) {
       formAction(secretWord);
@@ -22,7 +22,7 @@ export const EnterWordForm = ({ formAction }) => {
           className="mb-2 mx-sm-3"
           type="text"
           value={secretWord}
-          onChange={(evt) => setSecretWord(evt.target.value)}
+          onChange={(e) => setSecretWord(e.target.value)}
           placeholder="enter secret word"
         />
         <button

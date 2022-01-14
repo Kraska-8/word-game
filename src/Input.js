@@ -22,23 +22,23 @@ function Input({ secretWord }) {
           type="text"
           placeholder="enter guess"
           value={currentGuess}
-          onChange={(event) => setCurrentGuess(event.target.value)}
+          onChange={(e) => setCurrentGuess(e.target.value)}
         />
         <button
           data-test="submit-button"
-          onClick={(evt) => {
-            evt.preventDefault();
+          onClick={(e) => {
+            e.preventDefault();
             dispatch(guessWord(currentGuess));
             setCurrentGuess('');
           }}
-          className="btn btn-primary mb-2"
+          className="btn btn-primary mb-2 mx-3"
         >
           Submit
         </button>
         <button
           data-test="give-up-button"
-          onClick={(evt) => {
-            evt.preventDefault();
+          onClick={(e) => {
+            e.preventDefault();
             dispatch(giveUp());
           }}
           className="btn btn-danger mb-2"
